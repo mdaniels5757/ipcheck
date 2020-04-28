@@ -104,7 +104,7 @@ $fail = FALSE;
 $age = time() - strtotime( $registration );
 $ageDays = round( $age / 86400, 2 );
 // Let WMF staff use the tool even if they have <500 edits or their account is < 30 days old
-if( substr($username, -5) != "(WMF)" && ( $editcount < 500 || $age < 2592000 )) { $fail = TRUE; }
+if( substr($username, -5) != "(WMF)" && ( $editcount < 500 || $age < 2592000 ) ) { $fail = TRUE; }
 
 if( $fail === TRUE ) {
 	$globalEdits = getGlobalEdits( $username );
